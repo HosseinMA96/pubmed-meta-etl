@@ -6,8 +6,8 @@ import time
 import argparse
 
 # parser = argparse.ArgumentParser()
-# parser.add_argument("--tname", help="schema.table_name. Like hm31.george_pipeline")
-# parser.add_argument("--user", help="user of the db. Like hm31")
+# parser.add_argument("--tname", help="schema.table_name. Like myschema.pubmed_etl")
+# parser.add_argument("--user", help="user of the db. Like myuser")
 # parser.add_argument("--pas", help="password of the db")
 # parser.add_argument("--path", help="path to the directory containing distributed parquet files")
 #
@@ -19,8 +19,8 @@ import argparse
 # parquet_path = args.path
 
 parser = argparse.ArgumentParser()
-parser.add_argument("--tname", help="schema.table_name. Like hm31.george_pipeline")
-parser.add_argument("--user", help="user of the db. Like hm31")
+parser.add_argument("--tname", help="schema.table_name. Like myschema.pubmed_etl")
+parser.add_argument("--user", help="user of the db. Like myuser")
 parser.add_argument("--pas", help="password of the db")
 parser.add_argument("--path", help="path to the directory containing distributed parquet files")
 parser.add_argument("--parquet", action="store_true", help="Flag to indicate parquet dumping. If not present just dump on Postgres")
@@ -78,7 +78,7 @@ def write_df(result, table_name, jdbc_properties):
 #     "password": pas,
 #     "driver": "org.postgresql.Driver"
 # }
-# jdbc_url = "jdbc:postgresql://valhalla.cs.illinois.edu:5432/ernieplus"
+# jdbc_url = "jdbc:postgresql://HOST:5432/DATABASE"
 
 
 spark = SparkSession.builder \
@@ -151,7 +151,8 @@ print(f" converted statistics {init_count}")
 
 
 
-jdbc_url = "jdbc:postgresql://valhalla.cs.illinois.edu:5432/ernieplus"
+import os
+jdbc_url = os.environ.get("PUBMED_ETL_JDBC_URL", "jdbc:postgresql://localhost:5432/postgres")
 
 jdbc_properties = {
     "user": user,
@@ -160,13 +161,13 @@ jdbc_properties = {
 }
 
 #New insertion stuff
-# jdbc_url = "jdbc:postgresql://valhalla.cs.illinois.edu:5432/ernieplus"
+# jdbc_url = "jdbc:postgresql://HOST:5432/DATABASE"
 #
 # jdbc_properties = {
-#     "user": "hm31",
+#     "user": "myuser",
 #     "password": "REDACTED",
 #     "driver": "org.postgresql.Driver",
-#     'jdbc_url' : "jdbc:postgresql://valhalla.cs.illinois.edu:5432/ernieplus"
+#     'jdbc_url' : "jdbc:postgresql://HOST:5432/DATABASE"
 # }
 # write_df(george_df, tname, jdbc_properties)
 

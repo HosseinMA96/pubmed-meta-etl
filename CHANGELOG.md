@@ -1,0 +1,14 @@
+# Changelog
+
+All notable changes are listed here. Results must stay identical to `baseline/reference_stats.json` unless a change says otherwise.
+
+## Unreleased
+
+- Credentials and lab-specific paths removed from `pubmed_etl.sh`, `pyspark_parquet.py` and comments; settings now come from `PUBMED_ETL_*` environment variables. The Parquet route is unaffected (verified: identical output on the 2-file sample).
+- Added `baseline/` with reference numbers, checksums of the input files, and the script that recomputes them.
+- Rewrote `README.md`; added `.gitignore`.
+- History: a database password was redacted from two historical commits (hashes changed; authors, dates and messages unchanged).
+
+## 0.0.0 (2023-12-15 to 2024-08-06)
+
+Original research pipeline (see the commit history): XML extraction, parallel parsing to Parquet, Spark dedupe and flags, Postgres or Parquet output.

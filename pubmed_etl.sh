@@ -5,12 +5,14 @@ source ./venv/bin/activate
 
 
 
-gz_input='/shared/pcopy'
-parquet_output='/shared/hossein_hm31/parquet_test'
-cores=70
-table_name='hm31.pubmed_etl_performance_test'
-user='hm31'
-pas='REDACTED'
+# Configuration comes from environment variables, so no credentials live in this file.
+# Example: export PUBMED_ETL_DB_USER=me PUBMED_ETL_DB_PASSWORD=... (only needed for the Postgres output)
+gz_input="${PUBMED_ETL_GZ_INPUT:?set PUBMED_ETL_GZ_INPUT to the directory holding the .xml.gz files}"
+parquet_output="${PUBMED_ETL_PARQUET_OUTPUT:?set PUBMED_ETL_PARQUET_OUTPUT to an empty output directory}"
+cores="${PUBMED_ETL_CORES:-4}"
+table_name="${PUBMED_ETL_TABLE:-public.pubmed_etl}"
+user="${PUBMED_ETL_DB_USER:?set PUBMED_ETL_DB_USER}"
+pas="${PUBMED_ETL_DB_PASSWORD:?set PUBMED_ETL_DB_PASSWORD}"
 
 start_time=$(date +"%s")
 

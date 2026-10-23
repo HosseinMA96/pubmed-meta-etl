@@ -1,0 +1,30 @@
+{
+ "raw_rows": 60000,
+ "raw_unique_pmid": 60000,
+ "raw_empty_doi": 26600,
+ "raw_unique_nonempty_doi": 33400,
+ "out_rows": 33400,
+ "out_unique_pmid": 33400,
+ "out_unique_doi": 33400,
+ "sum_has_abstract": 18144,
+ "sum_has_title": 33400,
+ "sum_has_mesh": 33400,
+ "sum_has_year": 33400,
+ "out_columns": [
+  "pmid",
+  "doi",
+  "has_abstract",
+  "has_title",
+  "has_mesh",
+  "has_year"
+ ],
+ "out_dtypes": {
+  "pmid": "int64",
+  "doi": "object",
+  "has_abstract": "int32",
+  "has_title": "int32",
+  "has_mesh": "int32",
+  "has_year": "int32"
+ },
+ "out_sha256_sorted_csv": "222ab71b4757ea91ca12544e2cee8a11d918eae87d4e1292515eb41004079475"
+}

@@ -1,0 +1,12 @@
+# environments and caches
+venv/
+.venv/
+__pycache__/
+*.pyc
+# run outputs and logs
+*.parquet
+*.xml
+*.xml.gz
+logs/
+spark-warehouse/
+nohup.out

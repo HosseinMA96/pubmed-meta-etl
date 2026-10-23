@@ -281,7 +281,7 @@ def parallelize(file_path, dump_address, mode='parquet'):
         insert_values_into_table(query_array)
 
     elif mode == 'parquet':
-        xml_name = file_path.split('/')[-1].split('.')[0]  # Example '/shared/hossein_hm31/xml_data/pubmed23n0933.xml' -> pubmed23n0933.xml
+        xml_name = file_path.split('/')[-1].split('.')[0]  # Example '/path/to/xml_data/pubmed23n0933.xml' -> pubmed23n0933.xml
         df = pd.DataFrame(meta_data_array)
         df.set_index(['PMID', 'doi'], inplace=True)
         df.to_parquet(f'{dump_address + xml_name}.parquet')
@@ -344,7 +344,7 @@ def add_remaining(xml_data_dir, parquet_dir, cores):
     lst = []
 
     for file in files_left:
-        #lst.append((f'/shared/hossein_hm31/xml_data/{file}.xml',))
+        #lst.append((f'/path/to/xml_data/{file}.xml',))
         lst.append((f'/{xml_data_dir}{file}.xml', parquet_dir))
 
     with multiprocessing.Pool(processes=cores) as pool:
