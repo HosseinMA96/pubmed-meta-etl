@@ -1,0 +1,43 @@
+{
+  "run": "topo_equal_raw_s4311",
+  "engine": "igraph",
+  "setting": "topo_equal",
+  "coeffs_thesis_order": [
+    0,
+    0,
+    0.25,
+    0.25,
+    0.25,
+    0.25,
+    0
+  ],
+  "transform": "raw",
+  "gamma": 0.05,
+  "seed": 4311,
+  "nodes": 7445898,
+  "edges": 57512086,
+  "mean_weight_raw": 0.008068388787200767,
+  "predicted_effective_gamma": 6.197024129441699,
+  "cov1": 4.732310327108967,
+  "cov10": 0.12518302023476552,
+  "clusters_gt1": 134431,
+  "clusters_gt10": 662,
+  "singletons": 7093535,
+  "max_size": 55,
+  "cpm_score_unweighted_0.05": 376204.34999999986,
+  "intra_edge_share": 0.006906530915953909,
+  "cluster_seconds": 1568.6045200824738,
+  "weighted_H": 13705.231058690453,
+  "coherence_intra": {
+    "mean_f6": 0.8570518493652344,
+    "share_within_5y": 0.8898514384115164,
+    "mean_bib_jaccard": 0.1449020170891558
+  },
+  "coherence_all_edges": {
+    "mean_f6": 0.787993311882019,
+    "share_within_5y": 0.4504978484000737,
+    "mean_bib_jaccard": 0.0172177511585103
+  },
+  "peak_rss_gb": 11.35812,
+  "total_seconds": 1678.9278523921967
+}

@@ -1,0 +1,4 @@
+python 3.10.9 (~/anaconda3/bin/python3)
+numpy 1.26.4
+scipy 1.10.0
+pyarrow 19.0.0

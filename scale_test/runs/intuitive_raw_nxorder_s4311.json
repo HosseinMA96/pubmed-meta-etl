@@ -1,0 +1,45 @@
+{
+  "run": "intuitive_raw_nxorder_s4311",
+  "engine": "igraph",
+  "setting": "intuitive",
+  "coeffs_thesis_order": [
+    0.03571428571428571,
+    0.07142857142857142,
+    0.10714285714285714,
+    0.14285714285714285,
+    0.17857142857142858,
+    0.21428571428571427,
+    0.25
+  ],
+  "transform": "raw",
+  "misalign": "nx_order",
+  "script_sha256": "42fd41552cb74ab094ae80b8cf7b46a30f59e095bab3315eae87cbc74da2df11",
+  "gamma": 0.05,
+  "seed": 4311,
+  "nodes": 7445898,
+  "edges": 57512086,
+  "mean_weight_raw": 0.22607208366882303,
+  "predicted_effective_gamma": 0.22116839544525932,
+  "cov1": 32.282916043169,
+  "cov10": 3.095368752029641,
+  "clusters_gt1": 401652,
+  "clusters_gt10": 8668,
+  "singletons": 5042145,
+  "max_size": 158,
+  "cpm_score_unweighted_0.05": 3264233.2500000037,
+  "intra_edge_share": 0.06482665226227405,
+  "cluster_seconds": 2017.902057647705,
+  "weighted_H": 447398.1831115391,
+  "coherence_intra": {
+    "mean_f6": 0.8074756860733032,
+    "share_within_5y": 0.5373745143920204,
+    "mean_bib_jaccard": 0.04114970174060232
+  },
+  "coherence_all_edges": {
+    "mean_f6": 0.787993311882019,
+    "share_within_5y": 0.4504978484000737,
+    "mean_bib_jaccard": 0.0172177511585103
+  },
+  "peak_rss_gb": 10.941512,
+  "total_seconds": 2143.644861459732
+}

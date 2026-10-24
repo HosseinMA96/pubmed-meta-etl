@@ -1,0 +1,285 @@
+{
+ "parquet": "/path/to/all_edges_features.parquet",
+ "gamma": 0.05,
+ "weight_order": "thesis: year, mesh_median, cocitation_jaccard, cocitation_frequency, bib_jaccard, bib_frequency, cosine",
+ "settings": {
+  "unweighted": null,
+  "intuitive": [
+   0.03571428571428571,
+   0.07142857142857142,
+   0.10714285714285714,
+   0.14285714285714285,
+   0.17857142857142858,
+   0.21428571428571427,
+   0.25
+  ],
+  "topo_equal": [
+   0,
+   0,
+   0.25,
+   0.25,
+   0.25,
+   0.25,
+   0
+  ],
+  "bibJ_0.875": [
+   0,
+   0,
+   0.041666666666666664,
+   0.041666666666666664,
+   0.875,
+   0.041666666666666664,
+   0
+  ],
+  "cocF_0.875": [
+   0,
+   0,
+   0.041666666666666664,
+   0.875,
+   0.041666666666666664,
+   0.041666666666666664,
+   0
+  ]
+ },
+ "runs": {
+  "baseline_s4311": {
+   "setting": "unweighted",
+   "seed": 4311
+  },
+  "baseline_s1": {
+   "setting": "unweighted",
+   "seed": 1
+  },
+  "baseline_s2": {
+   "setting": "unweighted",
+   "seed": 2
+  },
+  "baseline_s3": {
+   "setting": "unweighted",
+   "seed": 3
+  },
+  "baseline_s4": {
+   "setting": "unweighted",
+   "seed": 4
+  },
+  "intuitive_raw_s4311": {
+   "setting": "intuitive",
+   "seed": 4311,
+   "transform": "raw"
+  },
+  "intuitive_meannorm_s4311": {
+   "setting": "intuitive",
+   "seed": 4311,
+   "transform": "mean_norm"
+  },
+  "intuitive_meannorm_s1": {
+   "setting": "intuitive",
+   "seed": 1,
+   "transform": "mean_norm"
+  },
+  "intuitive_meannorm_s2": {
+   "setting": "intuitive",
+   "seed": 2,
+   "transform": "mean_norm"
+  },
+  "topo_equal_raw_s4311": {
+   "setting": "topo_equal",
+   "seed": 4311,
+   "transform": "raw"
+  },
+  "topo_equal_meannorm_s4311": {
+   "setting": "topo_equal",
+   "seed": 4311,
+   "transform": "mean_norm"
+  },
+  "topo_equal_meannorm_s1": {
+   "setting": "topo_equal",
+   "seed": 1,
+   "transform": "mean_norm"
+  },
+  "topo_equal_meannorm_s2": {
+   "setting": "topo_equal",
+   "seed": 2,
+   "transform": "mean_norm"
+  },
+  "bibJ_0.875_raw_s4311": {
+   "setting": "bibJ_0.875",
+   "seed": 4311,
+   "transform": "raw"
+  },
+  "bibJ_0.875_meannorm_s4311": {
+   "setting": "bibJ_0.875",
+   "seed": 4311,
+   "transform": "mean_norm"
+  },
+  "bibJ_0.875_meannorm_s1": {
+   "setting": "bibJ_0.875",
+   "seed": 1,
+   "transform": "mean_norm"
+  },
+  "bibJ_0.875_meannorm_s2": {
+   "setting": "bibJ_0.875",
+   "seed": 2,
+   "transform": "mean_norm"
+  },
+  "cocF_0.875_raw_s4311": {
+   "setting": "cocF_0.875",
+   "seed": 4311,
+   "transform": "raw"
+  },
+  "cocF_0.875_meannorm_s4311": {
+   "setting": "cocF_0.875",
+   "seed": 4311,
+   "transform": "mean_norm"
+  },
+  "cocF_0.875_meannorm_s1": {
+   "setting": "cocF_0.875",
+   "seed": 1,
+   "transform": "mean_norm"
+  },
+  "cocF_0.875_meannorm_s2": {
+   "setting": "cocF_0.875",
+   "seed": 2,
+   "transform": "mean_norm"
+  },
+  "topo_equal_map110_s4311": {
+   "setting": "topo_equal",
+   "seed": 4311,
+   "transform": "map110"
+  },
+  "topo_equal_map110_s1": {
+   "setting": "topo_equal",
+   "seed": 1,
+   "transform": "map110"
+  },
+  "topo_equal_map110_s2": {
+   "setting": "topo_equal",
+   "seed": 2,
+   "transform": "map110"
+  },
+  "baseline_s4311_repeat": {
+   "setting": "unweighted",
+   "seed": 4311
+  },
+  "intuitive_raw_nxorder_s4311": {
+   "setting": "intuitive",
+   "seed": 4311,
+   "transform": "raw",
+   "misalign": "nx_order"
+  },
+  "topo_equal_map110_nxorder_s4311": {
+   "setting": "topo_equal",
+   "seed": 4311,
+   "transform": "map110",
+   "misalign": "nx_order"
+  },
+  "intuitive_raw_shuffle_s4311": {
+   "setting": "intuitive",
+   "seed": 4311,
+   "transform": "raw",
+   "misalign": "shuffle"
+  },
+  "topo_equal_map110_shuffle_s4311": {
+   "setting": "topo_equal",
+   "seed": 4311,
+   "transform": "map110",
+   "misalign": "shuffle"
+  },
+  "topo_equal_raw_nxorder_s4311": {
+   "setting": "topo_equal",
+   "seed": 4311,
+   "transform": "raw",
+   "misalign": "nx_order"
+  },
+  "baseline_g0.075_s4311": {
+   "setting": "unweighted",
+   "seed": 4311,
+   "gamma": 0.075
+  },
+  "baseline_g0.1_s4311": {
+   "setting": "unweighted",
+   "seed": 4311,
+   "gamma": 0.1
+  },
+  "baseline_g0.15_s4311": {
+   "setting": "unweighted",
+   "seed": 4311,
+   "gamma": 0.15
+  },
+  "baseline_g0.2_s4311": {
+   "setting": "unweighted",
+   "seed": 4311,
+   "gamma": 0.2
+  },
+  "baseline_g0.0001_s4311": {
+   "setting": "unweighted",
+   "seed": 4311,
+   "gamma": 0.0001
+  },
+  "baseline_g0.001_s4311": {
+   "setting": "unweighted",
+   "seed": 4311,
+   "gamma": 0.001
+  },
+  "baseline_g0.01_s4311": {
+   "setting": "unweighted",
+   "seed": 4311,
+   "gamma": 0.01
+  },
+  "baseline_g0.25_s4311": {
+   "setting": "unweighted",
+   "seed": 4311,
+   "gamma": 0.25
+  },
+  "baseline_g0.5_s4311": {
+   "setting": "unweighted",
+   "seed": 4311,
+   "gamma": 0.5
+  },
+  "baseline_g0.75_s4311": {
+   "setting": "unweighted",
+   "seed": 4311,
+   "gamma": 0.75
+  },
+  "baseline_g0.95_s4311": {
+   "setting": "unweighted",
+   "seed": 4311,
+   "gamma": 0.95
+  },
+  "topo_equal_meannormfloor_s4311": {
+   "setting": "topo_equal",
+   "seed": 4311,
+   "transform": "mean_norm_floor"
+  },
+  "topo_equal_meannormfloor_s1": {
+   "setting": "topo_equal",
+   "seed": 1,
+   "transform": "mean_norm_floor"
+  },
+  "topo_equal_meannormfloor_s2": {
+   "setting": "topo_equal",
+   "seed": 2,
+   "transform": "mean_norm_floor"
+  },
+  "intuitive_meannorm_g0.035_s4311": {
+   "setting": "intuitive",
+   "seed": 4311,
+   "transform": "mean_norm",
+   "gamma": 0.035
+  },
+  "topo_equal_meannorm_g0.01_s4311": {
+   "setting": "topo_equal",
+   "seed": 4311,
+   "transform": "mean_norm",
+   "gamma": 0.01
+  },
+  "topo_equal_meannormzeromean_s4311": {
+   "setting": "topo_equal",
+   "seed": 4311,
+   "transform": "mean_norm_zeromean"
+  }
+ },
+ "work_dir": "work",
+ "engine": "igraph",
+ "shuffle_seed": 20261024
+}

@@ -1,0 +1,14 @@
+igraph==1.0.0
+leidenalg==0.12.0
+networkx==2.8.8
+numpy==2.2.6
+packaging==26.3
+pandas==2.3.3
+pyarrow==25.0.1
+python-dateutil==3.0.0
+python-igraph==1.0.0
+pytz==2026.5
+scipy==1.15.3
+six==1.17.0
+texttable==1.7.2
+tzdata==2026.5

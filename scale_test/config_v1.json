@@ -1,0 +1,163 @@
+{
+ "parquet": "/path/to/all_edges_features.parquet",
+ "gamma": 0.05,
+ "weight_order": "thesis: year, mesh_median, cocitation_jaccard, cocitation_frequency, bib_jaccard, bib_frequency, cosine",
+ "settings": {
+  "unweighted": null,
+  "intuitive": [
+   0.03571428571428571,
+   0.07142857142857142,
+   0.10714285714285714,
+   0.14285714285714285,
+   0.17857142857142858,
+   0.21428571428571427,
+   0.25
+  ],
+  "topo_equal": [
+   0,
+   0,
+   0.25,
+   0.25,
+   0.25,
+   0.25,
+   0
+  ],
+  "bibJ_0.875": [
+   0,
+   0,
+   0.041666666666666664,
+   0.041666666666666664,
+   0.875,
+   0.041666666666666664,
+   0
+  ],
+  "cocF_0.875": [
+   0,
+   0,
+   0.041666666666666664,
+   0.875,
+   0.041666666666666664,
+   0.041666666666666664,
+   0
+  ]
+ },
+ "runs": {
+  "baseline_s4311": {
+   "setting": "unweighted",
+   "seed": 4311
+  },
+  "baseline_s1": {
+   "setting": "unweighted",
+   "seed": 1
+  },
+  "baseline_s2": {
+   "setting": "unweighted",
+   "seed": 2
+  },
+  "baseline_s3": {
+   "setting": "unweighted",
+   "seed": 3
+  },
+  "baseline_s4": {
+   "setting": "unweighted",
+   "seed": 4
+  },
+  "intuitive_raw_s4311": {
+   "setting": "intuitive",
+   "seed": 4311,
+   "transform": "raw"
+  },
+  "intuitive_meannorm_s4311": {
+   "setting": "intuitive",
+   "seed": 4311,
+   "transform": "mean_norm"
+  },
+  "intuitive_meannorm_s1": {
+   "setting": "intuitive",
+   "seed": 1,
+   "transform": "mean_norm"
+  },
+  "intuitive_meannorm_s2": {
+   "setting": "intuitive",
+   "seed": 2,
+   "transform": "mean_norm"
+  },
+  "topo_equal_raw_s4311": {
+   "setting": "topo_equal",
+   "seed": 4311,
+   "transform": "raw"
+  },
+  "topo_equal_meannorm_s4311": {
+   "setting": "topo_equal",
+   "seed": 4311,
+   "transform": "mean_norm"
+  },
+  "topo_equal_meannorm_s1": {
+   "setting": "topo_equal",
+   "seed": 1,
+   "transform": "mean_norm"
+  },
+  "topo_equal_meannorm_s2": {
+   "setting": "topo_equal",
+   "seed": 2,
+   "transform": "mean_norm"
+  },
+  "bibJ_0.875_raw_s4311": {
+   "setting": "bibJ_0.875",
+   "seed": 4311,
+   "transform": "raw"
+  },
+  "bibJ_0.875_meannorm_s4311": {
+   "setting": "bibJ_0.875",
+   "seed": 4311,
+   "transform": "mean_norm"
+  },
+  "bibJ_0.875_meannorm_s1": {
+   "setting": "bibJ_0.875",
+   "seed": 1,
+   "transform": "mean_norm"
+  },
+  "bibJ_0.875_meannorm_s2": {
+   "setting": "bibJ_0.875",
+   "seed": 2,
+   "transform": "mean_norm"
+  },
+  "cocF_0.875_raw_s4311": {
+   "setting": "cocF_0.875",
+   "seed": 4311,
+   "transform": "raw"
+  },
+  "cocF_0.875_meannorm_s4311": {
+   "setting": "cocF_0.875",
+   "seed": 4311,
+   "transform": "mean_norm"
+  },
+  "cocF_0.875_meannorm_s1": {
+   "setting": "cocF_0.875",
+   "seed": 1,
+   "transform": "mean_norm"
+  },
+  "cocF_0.875_meannorm_s2": {
+   "setting": "cocF_0.875",
+   "seed": 2,
+   "transform": "mean_norm"
+  },
+  "topo_equal_map110_s4311": {
+   "setting": "topo_equal",
+   "seed": 4311,
+   "transform": "map110"
+  },
+  "topo_equal_map110_s1": {
+   "setting": "topo_equal",
+   "seed": 1,
+   "transform": "map110"
+  },
+  "topo_equal_map110_s2": {
+   "setting": "topo_equal",
+   "seed": 2,
+   "transform": "map110"
+  }
+ },
+ "work_dir": "/path/to/scale_test_work",
+ "engine": "igraph"
+}

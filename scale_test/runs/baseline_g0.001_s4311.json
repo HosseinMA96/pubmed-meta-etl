@@ -1,0 +1,51 @@
+{
+  "run": "baseline_g0.001_s4311",
+  "engine": "igraph",
+  "setting": "unweighted",
+  "coeffs_thesis_order": null,
+  "transform": "raw",
+  "misalign": null,
+  "script_sha256": "b013d4befe8b632a8d8a9a46cf772902c40a335262ba42c212beee4d1baba78d",
+  "gamma": 0.001,
+  "seed": 4311,
+  "nodes": 7445898,
+  "edges": 57512086,
+  "mean_weight_raw": 1.0,
+  "predicted_effective_gamma": 0.001,
+  "cov1": 90.58446677620348,
+  "cov10": 90.5589762309395,
+  "clusters_gt1": 37594,
+  "clusters_gt10": 37241,
+  "singletons": 701071,
+  "max_size": 13588,
+  "cpm_score_unweighted_0.05": -142785707.50000006,
+  "intra_edge_share": 0.42202423330636973,
+  "cluster_seconds": 783.9798038005829,
+  "coherence_intra": {
+    "mean_f6": 0.8044131994247437,
+    "share_within_5y": 0.47724268642053924,
+    "mean_bib_jaccard": 0.027721723286410867
+  },
+  "coherence_all_edges": {
+    "mean_f6": 0.787993311882019,
+    "share_within_5y": 0.4504978484000737,
+    "mean_bib_jaccard": 0.0172177511585103
+  },
+  "peak_rss_gb": 6.592844,
+  "total_seconds": 879.5616388320923,
+  "started_at": "2026-10-24T12:07:27-0700",
+  "finished_at": "2026-10-24T12:22:07-0700",
+  "config_entry": {
+    "setting": "unweighted",
+    "seed": 4311,
+    "gamma": 0.001
+  },
+  "versions": {
+    "python": "3.10.22",
+    "igraph": "1.0.0",
+    "leidenalg": "0.12.0",
+    "numpy": "2.2.6",
+    "pyarrow": "25.0.1"
+  },
+  "host": "Hossein"
+}

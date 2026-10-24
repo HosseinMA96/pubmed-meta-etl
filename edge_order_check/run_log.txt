@@ -1,0 +1,4 @@
+n=50 m=120: igraph edge k == table row k for 2/120 edges; numpy emulation matches thesis order: True
+n=2000 m=10000: igraph edge k == table row k for 2/10000 edges; numpy emulation matches thesis order: True
+[05:28:57] nx order: 0.0200% of edges keep their row position
+run_cpm.prepare_nx_order matches thesis order: True; misalign() reproduces the thesis weight assignment: True

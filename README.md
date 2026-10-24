@@ -101,6 +101,10 @@ Progress is tracked in the issues and in [CHANGELOG.md](CHANGELOG.md).
 
 [`thesis_pipeline/`](thesis_pipeline/) holds the research code that used this table in the M.S. thesis *A Framework for Similarity-Based Clustering of Biomedical Citation Graphs* (UIUC, 2024). The code joins a citation graph to the PubMed table by DOI, keeps the papers with the metadata you need, computes seven edge-similarity features (bibliographic coupling and co-citation counts and Jaccard coefficients, publication year, MeSH, and MedCPT embedding similarity), combines them with user weights, and clusters the graph with Leiden-CPM. It is a cleaned copy of [illinois-or-research-analytics/hm31_graphs](https://github.com/illinois-or-research-analytics/hm31_graphs) with credentials removed, and it is not packaged or tested in this form; see its README. The citation graph used in the thesis is not included.
 
+## Clustering experiments
+
+[`scale_test/`](scale_test/) and [`edge_order_check/`](edge_order_check/) hold new Leiden-CPM runs on the thesis graph (weight scale, weight–edge alignment, coherence) with aggregated results only. See their READMEs.
+
 ## Provenance
 
 This repository continues the development of

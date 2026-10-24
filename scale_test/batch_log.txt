@@ -1,0 +1,112 @@
+21:08:51 start intuitive_raw_s4311 (cap 11G)
+21:36:59 end intuitive_raw_s4311 exit 0
+21:36:59 start intuitive_meannorm_s4311 (cap 11G)
+21:57:55 end intuitive_meannorm_s4311 exit 0
+21:57:55 start topo_equal_raw_s4311 (cap 11G)
+22:25:54 end topo_equal_raw_s4311 exit 0
+22:25:54 start topo_equal_meannorm_s4311 (cap 11G)
+22:47:45 end topo_equal_meannorm_s4311 exit 0
+22:47:45 start topo_equal_map110_s4311 (cap 11G)
+23:08:44 end topo_equal_map110_s4311 exit 0
+23:08:44 start bibJ_0.875_raw_s4311 (cap 11G)
+23:37:03 end bibJ_0.875_raw_s4311 exit 0
+23:37:03 start bibJ_0.875_meannorm_s4311 (cap 11G)
+23:58:19 end bibJ_0.875_meannorm_s4311 exit 0
+23:58:19 start cocF_0.875_raw_s4311 (cap 11G)
+./run_all.sh: line 13: 10392 Killed                  systemd-run --user --scope -q -p MemoryMax=$CAP -p MemorySwapMax=0 $PY -I run_cpm.py config.json "$r" > "logs/$r.log" 2>&1
+00:04:17 end cocF_0.875_raw_s4311 exit 0
+00:04:17 start cocF_0.875_meannorm_s4311 (cap 11G)
+00:25:49 end cocF_0.875_meannorm_s4311 exit 0
+00:25:49 start baseline_s1 (cap 10G)
+00:43:58 end baseline_s1 exit 0
+00:43:58 start baseline_s2 (cap 10G)
+01:03:33 end baseline_s2 exit 0
+01:03:33 start intuitive_meannorm_s1 (cap 11G)
+01:25:12 end intuitive_meannorm_s1 exit 0
+01:25:12 start topo_equal_meannorm_s1 (cap 11G)
+01:47:44 end topo_equal_meannorm_s1 exit 0
+01:47:44 start topo_equal_map110_s1 (cap 11G)
+02:09:19 end topo_equal_map110_s1 exit 0
+02:09:19 start baseline_s3 (cap 10G)
+02:29:26 end baseline_s3 exit 0
+02:29:26 start baseline_s4 (cap 10G)
+02:49:31 end baseline_s4 exit 0
+02:49:31 start intuitive_meannorm_s2 (cap 11G)
+03:11:58 end intuitive_meannorm_s2 exit 0
+03:11:58 start topo_equal_meannorm_s2 (cap 11G)
+03:34:28 end topo_equal_meannorm_s2 exit 0
+03:34:28 start topo_equal_map110_s2 (cap 11G)
+03:56:30 end topo_equal_map110_s2 exit 0
+03:56:30 start bibJ_0.875_meannorm_s1 (cap 11G)
+04:19:19 end bibJ_0.875_meannorm_s1 exit 0
+04:19:19 start bibJ_0.875_meannorm_s2 (cap 11G)
+04:42:38 end bibJ_0.875_meannorm_s2 exit 0
+04:42:38 start cocF_0.875_meannorm_s1 (cap 11G)
+05:04:40 end cocF_0.875_meannorm_s1 exit 0
+05:04:40 start cocF_0.875_meannorm_s2 (cap 11G)
+05:26:18 end cocF_0.875_meannorm_s2 exit 0
+all done
+=== v2 batch 2026-10-24 ===
+[05:29:57] nx order: 0.0000% of edges keep their row position
+05:29:57 start intuitive_raw_nxorder_s4311 (cap 11G)
+06:05:41 end intuitive_raw_nxorder_s4311 ok
+06:05:41 start topo_equal_map110_nxorder_s4311 (cap 11G)
+06:32:08 end topo_equal_map110_nxorder_s4311 ok
+06:32:08 start intuitive_raw_shuffle_s4311 (cap 11G)
+07:07:14 end intuitive_raw_shuffle_s4311 ok
+07:07:14 start topo_equal_map110_shuffle_s4311 (cap 11G)
+07:34:28 end topo_equal_map110_shuffle_s4311 ok
+07:34:28 start baseline_s4311_repeat (cap 10G)
+07:54:04 end baseline_s4311_repeat ok
+07:54:04 start cocF_0.875_raw_s4311 (cap 12G)
+08:21:32 end cocF_0.875_raw_s4311 ok
+08:21:32 start topo_equal_raw_nxorder_s4311 (cap 11G)
+./run_all.sh: line 12: 47929 Killed                  systemd-run --user --scope -q -p MemoryMax=$CAP -p MemorySwapMax=0 $PY -I run_cpm.py config.json "$r" > "logs/$r.log" 2>&1
+08:28:54 end topo_equal_raw_nxorder_s4311 FAILED (status 137, no JSON; see logs/topo_equal_raw_nxorder_s4311.log)
+all done
+=== v2 batch rerun at 12G 2026-10-24 ===
+08:29:15 start topo_equal_raw_nxorder_s4311 (cap 12G)
+09:05:12 end topo_equal_raw_nxorder_s4311 ok
+all done
+=== batch 3 (coverage controls) 2026-10-24 ===
+09:05:51 start baseline_g0.075_s4311 (cap 10G)
+09:24:38 end baseline_g0.075_s4311 ok
+09:24:38 start baseline_g0.1_s4311 (cap 10G)
+09:47:03 end baseline_g0.1_s4311 ok
+09:47:03 start baseline_g0.15_s4311 (cap 10G)
+10:06:17 end baseline_g0.15_s4311 ok
+10:06:17 start baseline_g0.2_s4311 (cap 10G)
+10:32:19 end baseline_g0.2_s4311 ok
+all done
+=== batch 4 (script v3: floor test + gamma grid) 2026-10-24 ===
+10:32:42 start topo_equal_meannormfloor_s4311 (cap 11G)
+10:54:14 end topo_equal_meannormfloor_s4311 ok
+10:54:14 start baseline_g0.25_s4311 (cap 10G)
+11:20:32 end baseline_g0.25_s4311 ok
+11:20:32 start baseline_g0.01_s4311 (cap 10G)
+11:36:09 end baseline_g0.01_s4311 ok
+11:36:09 start baseline_g0.5_s4311 (cap 10G)
+12:07:27 end baseline_g0.5_s4311 ok
+12:07:27 start baseline_g0.001_s4311 (cap 10G)
+12:22:07 end baseline_g0.001_s4311 ok
+12:22:07 start baseline_g0.75_s4311 (cap 10G)
+12:43:51 end baseline_g0.75_s4311 ok
+12:43:51 start baseline_g0.0001_s4311 (cap 10G)
+12:58:01 end baseline_g0.0001_s4311 ok
+12:58:01 start baseline_g0.95_s4311 (cap 10G)
+13:11:05 end baseline_g0.95_s4311 ok
+all done
+=== batch 5 (floor seeds + coverage-matched weighted) 2026-10-24 ===
+13:11:33 start topo_equal_meannormfloor_s1 (cap 11G)
+13:33:42 end topo_equal_meannormfloor_s1 ok
+13:33:42 start topo_equal_meannormfloor_s2 (cap 11G)
+13:55:22 end topo_equal_meannormfloor_s2 ok
+13:55:22 start intuitive_meannorm_g0.035_s4311 (cap 11G)
+14:18:20 end intuitive_meannorm_g0.035_s4311 ok
+14:18:20 start topo_equal_meannorm_g0.01_s4311 (cap 11G)
+14:38:39 end topo_equal_meannorm_g0.01_s4311 ok
+all done
+=== batch 6 (script v4: zero-weight edges at mean positive weight) 2026-10-24 ===
+14:39:07 start topo_equal_meannormzeromean_s4311 (cap 11G)
+15:01:41 end topo_equal_meannormzeromean_s4311 ok
+all done

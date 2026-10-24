@@ -1,0 +1,43 @@
+{
+  "run": "cocF_0.875_meannorm_s2",
+  "engine": "igraph",
+  "setting": "cocF_0.875",
+  "coeffs_thesis_order": [
+    0,
+    0,
+    0.041666666666666664,
+    0.875,
+    0.041666666666666664,
+    0.041666666666666664,
+    0
+  ],
+  "transform": "mean_norm",
+  "gamma": 0.05,
+  "seed": 2,
+  "nodes": 7445898,
+  "edges": 57512086,
+  "mean_weight_raw": 0.0015333136528678723,
+  "predicted_effective_gamma": 32.60911419296452,
+  "cov1": 28.861542288116222,
+  "cov10": 24.556339611420945,
+  "clusters_gt1": 115190,
+  "clusters_gt10": 60587,
+  "singletons": 5296897,
+  "max_size": 1502,
+  "cpm_score_unweighted_0.05": 4689908.749999998,
+  "intra_edge_share": 0.1621992462592993,
+  "cluster_seconds": 1184.647940158844,
+  "weighted_H": 25440990.564951763,
+  "coherence_intra": {
+    "mean_f6": 0.8219058513641357,
+    "share_within_5y": 0.5702245086170569,
+    "mean_bib_jaccard": 0.05149058577624229
+  },
+  "coherence_all_edges": {
+    "mean_f6": 0.787993311882019,
+    "share_within_5y": 0.4504978484000737,
+    "mean_bib_jaccard": 0.0172177511585103
+  },
+  "peak_rss_gb": 10.001784,
+  "total_seconds": 1297.3464124202728
+}

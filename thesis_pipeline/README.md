@@ -50,6 +50,7 @@ The scripts also contain absolute scratch paths (`/shared/...`) and table names 
 - **Rescaling to [1,10]** (`apply_weight_scaling`): zero weights are set to the smallest nonzero weight, then all weights are mapped linearly to [1,10], separately for each weight setting.
 - **Reported CPM score:** computed on the unweighted graph (number of internal edges) at the given resolution, not on the weighted objective that Leiden optimizes.
 - **Sweeps:** the topological sweep script runs strengths 0 to 0.875 in 8 steps; Leiden uses seed 4311 by default.
+- **Known issue, weight–edge alignment:** `clustering/weighting_clustering_pipeline.py:leiden` passes the weight column to `leidenalg` by position, but `construct_base_graph.py` builds the graph through networkx, which reorders the edges. The weights therefore do not reach their own edges. See [`../edge_order_check/`](../edge_order_check/) for the check and [`../scale_test/`](../scale_test/) for runs with aligned weights. To fix, attach the weights as an igraph edge attribute keyed by the endpoint pair, or build the graph directly from the weight table's rows.
 
 ## Not included
 The curated exosome network (node and edge lists), the resulting graph, and the feature table are not part of this repository.

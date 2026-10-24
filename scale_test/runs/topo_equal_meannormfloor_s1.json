@@ -1,0 +1,60 @@
+{
+  "run": "topo_equal_meannormfloor_s1",
+  "engine": "igraph",
+  "setting": "topo_equal",
+  "coeffs_thesis_order": [
+    0,
+    0,
+    0.25,
+    0.25,
+    0.25,
+    0.25,
+    0
+  ],
+  "transform": "mean_norm_floor",
+  "misalign": null,
+  "script_sha256": "b013d4befe8b632a8d8a9a46cf772902c40a335262ba42c212beee4d1baba78d",
+  "gamma": 0.05,
+  "seed": 1,
+  "nodes": 7445898,
+  "edges": 57512086,
+  "mean_weight_raw": 0.008068388787200767,
+  "predicted_effective_gamma": 6.197024129441699,
+  "cov1": 30.745734094128068,
+  "cov10": 26.789139469812774,
+  "clusters_gt1": 116064,
+  "clusters_gt10": 65849,
+  "singletons": 5156602,
+  "max_size": 1140,
+  "cpm_score_unweighted_0.05": 4590779.449999999,
+  "intra_edge_share": 0.16135058985688677,
+  "cluster_seconds": 1209.9681057929993,
+  "weighted_H": 24955102.000640027,
+  "coherence_intra": {
+    "mean_f6": 0.8214188814163208,
+    "share_within_5y": 0.5695536309773397,
+    "mean_bib_jaccard": 0.05232640680684245
+  },
+  "coherence_all_edges": {
+    "mean_f6": 0.787993311882019,
+    "share_within_5y": 0.4504978484000737,
+    "mean_bib_jaccard": 0.0172177511585103
+  },
+  "peak_rss_gb": 10.042944,
+  "total_seconds": 1328.4544868469238,
+  "started_at": "2026-10-24T13:11:33-0700",
+  "finished_at": "2026-10-24T13:33:42-0700",
+  "config_entry": {
+    "setting": "topo_equal",
+    "seed": 1,
+    "transform": "mean_norm_floor"
+  },
+  "versions": {
+    "python": "3.10.22",
+    "igraph": "1.0.0",
+    "leidenalg": "0.12.0",
+    "numpy": "2.2.6",
+    "pyarrow": "25.0.1"
+  },
+  "host": "Hossein"
+}
