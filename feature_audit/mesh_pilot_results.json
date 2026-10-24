@@ -1,0 +1,34 @@
+{
+  "articles": 1591,
+  "term_occurrences": 18576,
+  "terms_missing_from_lookup": 0,
+  "pairs": 1264845,
+  "share_cross_category_term_pairs_mean": 0.7776940199732411,
+  "share_pairs_majority_cross_category": 0.9986251279801083,
+  "nonzero_share": {
+    "median": 0.0013748720198917654,
+    "mean": 0.9999810253430262,
+    "best_match": 0.9999810253430262
+  },
+  "distribution": {
+    "median": {
+      "q1": 0.0,
+      "median": 0.0,
+      "q3": 0.0,
+      "mean": 0.0012503508335013382
+    },
+    "mean": {
+      "q1": 0.36666666666666664,
+      "median": 0.46153846153846156,
+      "q3": 0.5714285714285714,
+      "mean": 0.48027173700493997
+    },
+    "best_match": {
+      "q1": 2.111111111111111,
+      "median": 2.6176470588235294,
+      "q3": 3.19327731092437,
+      "mean": 2.667535016498174
+    }
+  },
+  "note": "Pilot: PMID -> MeSH lists for the articles of one CEN cluster, fetched from PubMed E-utilities in 2023 during the thesis pilot. All article pairs are used, not only citing pairs."
+}

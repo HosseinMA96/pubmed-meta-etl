@@ -1,0 +1,20 @@
+{
+  "parquet": "/path/to/all_edges_features.parquet",
+  "seed": 20261023,
+  "spearman_sample": 2000000,
+  "agreement_bins": 5,
+  "expected": {
+    "edges": 57512086,
+    "bib_rows": 53200439,
+    "cocitation_rows": 44509707,
+    "nonzero_topological": 30382764,
+    "table_4_3": {
+      "min": 4.6e-05,
+      "q1": 0.005,
+      "median": 0.0097,
+      "mean": 0.0152,
+      "q3": 0.0193,
+      "max": 0.495
+    }
+  }
+}

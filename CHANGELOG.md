@@ -4,6 +4,7 @@ All notable changes are listed here. Results must stay identical to `baseline/re
 
 ## Unreleased
 
+- Added `feature_audit/`: audit script of the CENM edge-feature table and a MeSH aggregation pilot, with aggregated results and CSV summaries (no per-edge data). Does not affect the parsing pipeline.
 - Added `thesis_pipeline/`: cleaned copy of the thesis graph, feature, weighting and clustering scripts (credentials and server names replaced by environment variables; no logic changes) with a README.
 - Added the MIT license.
 

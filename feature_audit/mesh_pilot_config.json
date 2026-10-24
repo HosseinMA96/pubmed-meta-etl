@@ -1,0 +1,5 @@
+{
+  "metadata": "/path/to/meta_data_dict.json",
+  "mesh_lookup": "/path/to/mesh.json",
+  "note": "Pilot: PMID -> MeSH lists for the articles of one CEN cluster, fetched from PubMed E-utilities in 2023 during the thesis pilot. All article pairs are used, not only citing pairs."
+}
