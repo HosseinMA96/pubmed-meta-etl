@@ -4,6 +4,9 @@ All notable changes are listed here. Results must stay identical to `baseline/re
 
 ## Unreleased
 
+- Added `thesis_pipeline/`: cleaned copy of the thesis graph, feature, weighting and clustering scripts (credentials and server names replaced by environment variables; no logic changes) with a README.
+- Added the MIT license.
+
 - Credentials and lab-specific paths removed from `pubmed_etl.sh`, `pyspark_parquet.py` and comments; settings now come from `PUBMED_ETL_*` environment variables. The Parquet route is unaffected (verified: identical output on the 2-file sample).
 - Added `baseline/` with reference numbers, checksums of the input files, and the script that recomputes them.
 - Rewrote `README.md`; added `.gitignore`.

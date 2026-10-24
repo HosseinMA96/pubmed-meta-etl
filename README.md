@@ -2,7 +2,7 @@
 
 Parse the [PubMed baseline](https://pubmed.ncbi.nlm.nih.gov/download/#annual-baseline) XML into a table that says, for every paper with a DOI, **which metadata it has**: year, MeSH terms, title, abstract.
 
-> **Status: early / alpha.** This is the original research pipeline, now being turned into a reusable, database-free tool. It is **not yet packaged or tested**, and it has **no license yet** (see [License](#license)). The roadmap is below.
+> **Status: early / alpha.** This is the original research pipeline, now being turned into a reusable, database-free tool. It is **not yet packaged or tested**; it is MIT-licensed (see [License](#license)). The roadmap is below.
 
 ## What it produces
 
@@ -97,6 +97,10 @@ Goal: a pip-installable tool that runs **locally without a database or Spark** o
 
 Progress is tracked in the issues and in [CHANGELOG.md](CHANGELOG.md).
 
+## Thesis pipeline (graph join, features, clustering)
+
+[`thesis_pipeline/`](thesis_pipeline/) holds the research code that used this table in the M.S. thesis *A Framework for Similarity-Based Clustering of Biomedical Citation Graphs* (UIUC, 2024). The code joins a citation graph to the PubMed table by DOI, keeps the papers with the metadata you need, computes seven edge-similarity features (bibliographic coupling and co-citation counts and Jaccard coefficients, publication year, MeSH, and MedCPT embedding similarity), combines them with user weights, and clusters the graph with Leiden-CPM. It is a cleaned copy of [illinois-or-research-analytics/hm31_graphs](https://github.com/illinois-or-research-analytics/hm31_graphs) with credentials removed, and it is not packaged or tested in this form; see its README. The citation graph used in the thesis is not included.
+
 ## Provenance
 
 This repository continues the development of
@@ -105,7 +109,7 @@ and keeps its full commit history, with the original authors and dates. The comm
 
 ## License
 
-**Not yet chosen.** Until a license file is added, all rights are reserved by the authors. An OSI-approved license will be added once agreed with the project authors. `TODO(authors)`
+MIT; see [LICENSE](LICENSE).
 
 ## Authors and contact
 

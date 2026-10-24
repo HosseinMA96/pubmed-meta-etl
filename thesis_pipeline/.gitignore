@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+*.parquet
+*.h5
+*.gpickle
+*.pickle
+*.pkl
+nohup.out
+files/
+figures/
