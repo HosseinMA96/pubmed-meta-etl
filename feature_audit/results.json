@@ -415,6 +415,12 @@
       "f5": 1.0
     }
   },
+  "missing_embedding_nodes": {
+    "nodes_all_edges_0.5": 61,
+    "edges_touching_them": 198,
+    "edges_0.5_not_touching_them": 0,
+    "overlap_with_f6_ge_0.99_edges": 0
+  },
   "checks": {
     "edges": [
       57512086,

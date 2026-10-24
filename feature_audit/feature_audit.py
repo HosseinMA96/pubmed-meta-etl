@@ -155,6 +155,23 @@ def main(config_path, out_path):
                                   "max_f6_edge": {"f6": float(keep["f6_cosine"][top]), "bib_jaccard": float(bj[top]), "bib_count": float(keep["f1_bib_count"][top]),
                                                   "f5": float(keep["f5_year"][top])}}
 
+    # Missing-embedding nodes: every incident edge has f6 = 0.5 (rule ii). Check they are
+    # disjoint from the near-identical edges.
+    ends = pf.read(columns=["first", "second"])
+    u, v = ends.column(0).to_numpy(), ends.column(1).to_numpy()
+    del ends
+    is_half = keep["f6_cosine"] == 0.5
+    deg = np.bincount(np.concatenate([u, v]))
+    deg_half = np.bincount(np.concatenate([u, v]), weights=np.concatenate([is_half, is_half]), minlength=deg.size)
+    missing = (deg > 0) & (deg_half == deg)
+    touches = missing[u] | missing[v]
+    res["missing_embedding_nodes"] = {"nodes_all_edges_0.5": int(missing.sum()),
+                                      "edges_touching_them": int(touches.sum()),
+                                      "edges_0.5_not_touching_them": int((is_half & ~touches).sum()),
+                                      "overlap_with_f6_ge_0.99_edges": int((touches & near).sum())}
+    del u, v, touches
+    log("missing-embedding check: done")
+
     # Compare with the numbers already reported in the papers / thesis
     exp = cfg["expected"]
     f = res["features"]

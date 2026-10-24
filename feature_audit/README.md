@@ -8,7 +8,7 @@ Only aggregated statistics are published here. The per-edge feature table (CENM,
 
 | File | Content |
 |---|---|
-| `feature_audit.py`, `config.json` | Audit of the per-edge feature table: counts, ranges, distributions, Spearman correlations (2,000,000-edge sample, seed in `config.json`), agreement between topological and semantic features, near-identical texts, the [1,10] weight map. Set `parquet` to your copy of the table. |
+| `feature_audit.py`, `config.json` | Audit of the per-edge feature table: counts, ranges, distributions, Spearman correlations (2,000,000-edge sample, seed in `config.json`), agreement between topological and semantic features, near-identical texts, the nodes without embeddings, the [1,10] weight map. Set `parquet` to your copy of the table. |
 | `results.json` | Full output of `feature_audit.py`. |
 | `feature_distributions.csv` | Summary behind Table IV. |
 | `agreement_by_bib_jaccard.csv` | Summary behind Table V. |
