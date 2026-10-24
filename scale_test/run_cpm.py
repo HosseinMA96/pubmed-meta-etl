@@ -8,6 +8,8 @@ and records coverage, the thesis CPM score, and intra-cluster coherence.
 Transforms: raw, mean_norm (divide by mean), mean_norm_floor (zeros -> smallest positive weight, then divide by
 mean; v3), mean_norm_zeromean (zeros -> mean of the positive weights, then divide by the mean; v4),
 map110 (thesis [1,10] map). Each JSON (v3) also stores start/end time, config entry, versions, host.
+v5: per-run "n_iterations" (default 2; -1 = until an iteration no longer improves the quality), igraph's reported
+quality, and the cluster-size histogram (sizes 1..100 and the count above 100).
 
 Option "misalign" (per run): "nx_order" gives row k's weight to the edge that the thesis graph
 construction puts at position k (networkx iteration order, see experiments/edge_order_check);
@@ -160,11 +162,14 @@ def main(config_path, run_name):
 
     t1 = time.time()
     engine = cfg.get("engine", "leidenalg")
+    n_iter = int(run.get("n_iterations", 2))
+    igraph_quality = None
     if engine == "igraph":
         # igraph's C implementation of Leiden; python-igraph draws from Python's random module
         random.seed(seed)
         part = g.community_leiden(objective_function="CPM", weights=weight_list, resolution=gamma,
-                                  n_iterations=2)
+                                  n_iterations=n_iter)
+        igraph_quality = float(part.quality)
     else:
         part = la.find_partition(g, la.CPMVertexPartition, weights=weight_list,
                                  resolution_parameter=gamma, seed=seed)
@@ -191,7 +196,10 @@ def main(config_path, run_name):
            "singletons": int((size == 1).sum()), "max_size": int(size.max()),
            # Thesis CPM score: unweighted e_c, gamma 0.05, singletons contribute 0
            "cpm_score_unweighted_0.05": float((e_c - 0.05 * pairs).sum()),
-           "intra_edge_share": float(intra.mean()), "cluster_seconds": t_cluster}
+           "intra_edge_share": float(intra.mean()), "cluster_seconds": t_cluster,
+           "n_iterations": n_iter, "igraph_quality": igraph_quality,
+           "size_histogram_1_100": np.bincount(np.minimum(size, 101), minlength=102)[1:101].tolist(),
+           "clusters_gt100": int((size > 100).sum())}
     if weights is not None:
         w_c = np.bincount(memb[u][intra], weights=weights[intra], minlength=size.size)
         res["weighted_H"] = float((w_c - gamma * pairs).sum())

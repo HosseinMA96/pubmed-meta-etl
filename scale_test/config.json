@@ -277,6 +277,33 @@
    "setting": "topo_equal",
    "seed": 4311,
    "transform": "mean_norm_zeromean"
+  },
+  "baseline_conv_s4311": {
+   "setting": "unweighted",
+   "seed": 4311,
+   "n_iterations": -1
+  },
+  "baseline_g0.075_hist_s4311": {
+   "setting": "unweighted",
+   "seed": 4311,
+   "gamma": 0.075
+  },
+  "baseline_g0.1_hist_s4311": {
+   "setting": "unweighted",
+   "seed": 4311,
+   "gamma": 0.1
+  },
+  "intuitive_meannorm_conv_s4311": {
+   "setting": "intuitive",
+   "seed": 4311,
+   "transform": "mean_norm",
+   "n_iterations": -1
+  },
+  "topo_equal_map110_conv_s4311": {
+   "setting": "topo_equal",
+   "seed": 4311,
+   "transform": "map110",
+   "n_iterations": -1
   }
  },
  "work_dir": "work",

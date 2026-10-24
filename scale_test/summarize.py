@@ -88,6 +88,8 @@ _v2 = os.path.join(HERE, "run_cpm_v2.py")
 V2_SHA = hashlib.sha256(open(_v2, "rb").read()).hexdigest() if os.path.exists(_v2) else "42fd41552cb74ab094ae80b8cf7b46a30f59e095bab3315eae87cbc74da2df11"
 _v3 = os.path.join(HERE, "run_cpm_v3.py")
 V3_SHA = hashlib.sha256(open(_v3, "rb").read()).hexdigest() if os.path.exists(_v3) else ""
+_v4 = os.path.join(HERE, "run_cpm_v4.py")
+V4_SHA = hashlib.sha256(open(_v4, "rb").read()).hexdigest() if os.path.exists(_v4) else ""
 CUR_SHA = hashlib.sha256(open(os.path.join(HERE, "run_cpm.py"), "rb").read()).hexdigest()
 times = {}
 for line in log.splitlines():
@@ -111,7 +113,7 @@ with open(os.path.join(HERE, "runs_manifest.csv"), "w", newline="") as fh:
             d = json.load(open(p))
             sha = d.get("script_sha256", V1_SHA)
             row += [time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(os.path.getmtime(p))), sha,
-                    {V1_SHA: "v1 (run_cpm_v1.py)", V2_SHA: "v2 (run_cpm_v2.py)", V3_SHA: "v3 (run_cpm_v3.py)"}.get(sha, "current run_cpm.py" if sha == CUR_SHA else "other (see RESULTS_LOG)"),
+                    {V1_SHA: "v1 (run_cpm_v1.py)", V2_SHA: "v2 (run_cpm_v2.py)", V3_SHA: "v3 (run_cpm_v3.py)", V4_SHA: "v4 (run_cpm_v4.py)"}.get(sha, "current run_cpm.py" if sha == CUR_SHA else "other (see RESULTS_LOG)"),
                     hashlib.sha256(open(p, "rb").read()).hexdigest(), f"{d['peak_rss_gb']:.2f}", f"{d['cluster_seconds']:.0f}"]
         else:
             row += [""] * 6

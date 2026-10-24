@@ -9,14 +9,15 @@ because it derives from the research group's network data. Set `parquet` in `con
 
 | File | Content |
 |---|---|
-| `run_cpm.py` | Builds a thesis weight setting, optionally transforms it (`raw`, `mean_norm`, `mean_norm_floor`, `mean_norm_zeromean`, `map110`) or misaligns it (`nx_order`, `shuffle`), runs igraph Leiden-CPM, and writes coverage, CPM score and intra-cluster coherence. Current version v4. |
-| `run_cpm_v1.py`–`run_cpm_v3.py`, `config_v1.json`, `run_all_v1.sh` | Frozen earlier versions; `runs_manifest.csv` says which version produced each run. |
+| `run_cpm.py` | Builds a thesis weight setting, optionally transforms it (`raw`, `mean_norm`, `mean_norm_floor`, `mean_norm_zeromean`, `map110`) or misaligns it (`nx_order`, `shuffle`), runs igraph Leiden-CPM, and writes coverage, CPM score and intra-cluster coherence. Current version v5 (adds per-run `n_iterations`, igraph's reported quality, and the cluster-size histogram). |
+| `run_cpm_v1.py`–`run_cpm_v4.py`, `config_v1.json`, `run_all_v1.sh` | Frozen earlier versions; `runs_manifest.csv` says which version produced each run. |
 | `config.json` | Global settings (γ, engine, weight settings, shuffle seed) and one entry per run. |
 | `run_all.sh`, `run_list.sh` | Sequential drivers; each run is wrapped in `systemd-run` with a memory cap. |
-| `runs/*.json` | One summary per run (47 runs). |
+| `runs/*.json` | One summary per run. |
 | `RESULTS.md`, `runs_manifest.csv` | Results table, seed spread, and per-run provenance, written by `summarize.py`. |
 | `batch_log.txt` | Timeline of every run attempt, including the two runs killed at an 11 GB cap and rerun at 12 GB. |
 | `determinism_check.py`, `determinism_check_log.txt` | Same seed gives an identical partition. |
+| `igraph_objective_check.py`, `igraph_objective_check_log.txt` | igraph's CPM quality equals Σ_c (e_c − γ C(n_c,2)) − γN/2 on random graphs, so it has the same optimal partitions as `leidenalg`'s CPM. |
 | `feasibility_*.txt` | First runs; `leidenalg` exceeded a 10 GB cap on this graph, so the runs use igraph's Leiden. |
 | `envs/` | Package versions (`leiden_conda.yml`, `leiden_pip_freeze.txt`), machine, input checksums. |
 
