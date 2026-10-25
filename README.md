@@ -4,6 +4,23 @@ Parse the [PubMed baseline](https://pubmed.ncbi.nlm.nih.gov/download/#annual-bas
 
 > **Status: early / alpha.** This is the original research pipeline, now being turned into a reusable, database-free tool. It is **not yet packaged or tested**; it is MIT-licensed (see [License](#license)). The roadmap is below.
 
+## Thesis erratum
+
+The M.S. thesis *A Framework for Similarity-Based Clustering of Biomedical Citation Graphs* (H. Mohasel Arjomandi,
+University of Illinois Urbana-Champaign, 2024) reports weighted Leiden-CPM clustering results that were computed with
+misaligned edge weights. The clustering code passed the weight column to `leidenalg` by position, but the graph had
+been built through networkx, which reorders the edges, so almost every weight was attached to a different edge.
+Randomly permuted weights reproduce the thesis weighted results; weights attached to their own edges do not.
+
+- Affected: all weighted clustering results in the thesis (intuitive weights, the topological sweeps, and the [1,10]
+  rescaled runs).
+- Not affected: the unweighted clustering runs, the graph construction, and the edge features.
+- Evidence: [`edge_order_check/`](edge_order_check/) (the thesis functions applied to test tables) and
+  [`scale_test/`](scale_test/) (reruns with aligned, thesis-order and permuted weights).
+- Corrected results: the companion paper *Similarity-Weighted Leiden-CPM Clustering of a 7.4-Million-Node Biomedical
+  Citation Graph: Weight Alignment, Scale, and Sparsity* (2026, in preparation), Section 6.1.
+- Fix: see the known issue in [`thesis_pipeline/README.md`](thesis_pipeline/README.md).
+
 ## What it produces
 
 One row per paper (unique PMID and unique, lower-cased DOI):

@@ -4,6 +4,7 @@ All notable changes are listed here. Results must stay identical to `baseline/re
 
 ## Unreleased
 
+- README: added a "Thesis erratum" section (weighted thesis results used misaligned weights; evidence and corrected results linked).
 - Added `scale_test/`: Leiden-CPM runs on CENM with aligned, mean-normalized, and misaligned weights (script, configs, 47 per-run summaries, logs, environments; no per-edge data).
 - Added `edge_order_check/`: shows that the thesis graph construction reorders edges, so weights passed by position do not reach their own edges; noted as a known issue in `thesis_pipeline/README.md`.
 - Added `scale_equivalence/`: numerical check, on synthetic graphs, that scaling all weights by α is equivalent to resolution γ/α in CPM.
