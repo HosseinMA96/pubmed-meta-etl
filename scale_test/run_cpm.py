@@ -8,7 +8,7 @@ and records coverage, the thesis CPM score, and intra-cluster coherence.
 Transforms: raw, mean_norm (divide by mean), mean_norm_floor (zeros -> smallest positive weight, then divide by
 mean; v3), mean_norm_zeromean (zeros -> mean of the positive weights, then divide by the mean; v4),
 map110 (thesis [1,10] map). Each JSON (v3) also stores start/end time, config entry, versions, host.
-v5: per-run "n_iterations" (default 2; -1 = until an iteration no longer improves the quality), igraph's reported
+v5: per-run "n_iterations" (default 2; -1 = until an iteration leaves the membership unchanged (igraph; no cap or timeout)), igraph's reported
 quality, and the cluster-size histogram (sizes 1..100 and the count above 100).
 
 Option "misalign" (per run): "nx_order" gives row k's weight to the edge that the thesis graph

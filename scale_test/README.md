@@ -13,6 +13,7 @@ because it derives from the research group's network data. Set `parquet` in `con
 | `run_cpm_v1.py`–`run_cpm_v4.py`, `config_v1.json`, `run_all_v1.sh` | Frozen earlier versions; `runs_manifest.csv` says which version produced each run. |
 | `config.json` | Global settings (γ, engine, weight settings, shuffle seed) and one entry per run. |
 | `run_all.sh`, `run_list.sh` | Sequential drivers; each run is wrapped in `systemd-run` with a memory cap. |
+| `mem_watchdog.sh`, `watchdog_log.txt` | Batch 7c helper: closed a browser if free memory fell below 1.5 GB while a run was active (does not touch the run). |
 | `runs/*.json` | One summary per run. |
 | `RESULTS.md`, `runs_manifest.csv` | Results table, seed spread, and per-run provenance, written by `summarize.py`. |
 | `batch_log.txt` | Timeline of every run attempt, including the two runs killed at an 11 GB cap and rerun at 12 GB. |
@@ -31,6 +32,9 @@ $PY -I run_cpm.py config.json prep_nx     # thesis (networkx) edge order -> work
 python3 -I summarize.py
 ```
 
-A run takes 11–34 minutes and 6.5–11.9 GB on an 8-thread laptop. Local paths in the configs and logs were replaced by
-`/path/to/` or `~`, so `code_checksums.sha256` matches the scripts but not those path lines.
+A run takes 11–34 minutes with two iterations and 62–68 minutes with ten (`*_it10_*`), using 6.5–11.9 GB on an
+8-thread laptop. A run with `n_iterations: -1` (repeat until the partition stops changing; igraph has no cap) did not
+finish within 2.4 hours and was stopped (`baseline_conv_s4311`, no JSON; see `batch_log.txt`).
+Local paths in the configs and logs were replaced by `/path/to/` or `~`, so `code_checksums.sha256` (local files)
+matches the scripts but not those path lines; `public_checksums.sha256` covers every file as published.
 The edge-order check of Section 6.1 is in [`../edge_order_check/`](../edge_order_check/).

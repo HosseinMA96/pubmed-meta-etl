@@ -112,3 +112,19 @@ all done
 all done
 === batch 7 (script v5: round-2 review: converged runs, size histograms) 2026-10-24 ===
 15:17:54 start baseline_conv_s4311 (cap 10G)
+17:43:34 end baseline_conv_s4311 FAILED (stopped by hand, not converged after ~2h25m of clustering; no JSON; replaced by n_iterations=10 runs, see RESULTS_LOG)
+=== batch 7b (script v5, comment fixed; converged baseline stopped, replaced by n_iterations=10 runs) 2026-10-24 ===
+17:43:40 start baseline_g0.1_hist_s4311 (cap 10G)
+18:06:38 end baseline_g0.1_hist_s4311 ok
+18:06:38 start baseline_g0.075_hist_s4311 (cap 10G)
+18:25:53 end baseline_g0.075_hist_s4311 ok
+18:25:53 start baseline_it10_s4311 (cap 10G)
+19:27:46 end baseline_it10_s4311 ok
+19:27:46 start intuitive_meannorm_it10_s4311 (cap 11G)
+19:46 end intuitive_meannorm_it10_s4311 FAILED (machine froze and rebooted ~19:46 during clustering; no JSON; not an OOM kill of the run, see RESULTS_LOG)
+=== batch 7c (script v5; rerun after machine freeze; cap 12G; mem_watchdog.sh kills Edge below 1.5 GB available) 2026-10-24 ===
+19:51:02 start intuitive_meannorm_it10_s4311 (cap 12G)
+20:54:25 end intuitive_meannorm_it10_s4311 ok
+20:54:25 start topo_equal_map110_it10_s4311 (cap 12G)
+22:04:35 end topo_equal_map110_it10_s4311 ok
+all done
