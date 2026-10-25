@@ -1,0 +1,11 @@
+{
+  "seed": 20261023,
+  "n_nodes_identity": 60,
+  "edge_prob": 0.15,
+  "n_random_partitions": 200,
+  "alphas": [0.5, 2.0, 9.0, 18.2],
+  "gammas": [0.05, 0.25, 1.0],
+  "n_nodes_bruteforce": 8,
+  "edge_prob_bruteforce": 0.5,
+  "tolerance": 1e-9
+}

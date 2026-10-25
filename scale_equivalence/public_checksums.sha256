@@ -1,0 +1,5 @@
+0da24a7b450aaa3dc85621d5880f9c684d6f35c31fe8e3fda9b3d60a0d7bb2db  ./code_checksums.sha256
+cfa7dbfa777e4e88166a8a7e24d81859985baccef616c4536aba56fa5d7b652b  ./config.json
+3ed32509c7f78d81f36eb06e83dc398b0d0eb9de469e0dd0657c3f4c0a6d07ae  ./README.md
+7c3002ae046a0a843ad27bdfcc88d947191a1eb2c2aeb0555efaab18d2fad9a9  ./run_log.txt
+418f75478e71e209b008b3b0c858df82e7f90b8d32f5aa28e39cfb0d88eb7972  ./scale_equivalence.py

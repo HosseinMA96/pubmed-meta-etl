@@ -6,6 +6,7 @@ All notable changes are listed here. Results must stay identical to `baseline/re
 
 - Added `scale_test/`: Leiden-CPM runs on CENM with aligned, mean-normalized, and misaligned weights (script, configs, 47 per-run summaries, logs, environments; no per-edge data).
 - Added `edge_order_check/`: shows that the thesis graph construction reorders edges, so weights passed by position do not reach their own edges; noted as a known issue in `thesis_pipeline/README.md`.
+- Added `scale_equivalence/`: numerical check, on synthetic graphs, that scaling all weights by α is equivalent to resolution γ/α in CPM.
 - Added `feature_audit/`: audit script of the CENM edge-feature table and a MeSH aggregation pilot, with aggregated results and CSV summaries (no per-edge data). Does not affect the parsing pipeline.
 - Added `thesis_pipeline/`: cleaned copy of the thesis graph, feature, weighting and clustering scripts (credentials and server names replaced by environment variables; no logic changes) with a README.
 - Added the MIT license.

@@ -103,7 +103,7 @@ Progress is tracked in the issues and in [CHANGELOG.md](CHANGELOG.md).
 
 ## Clustering experiments
 
-[`scale_test/`](scale_test/) and [`edge_order_check/`](edge_order_check/) hold new Leiden-CPM runs on the thesis graph (weight scale, weight–edge alignment, coherence) with aggregated results only. See their READMEs.
+[`scale_test/`](scale_test/), [`edge_order_check/`](edge_order_check/), and [`scale_equivalence/`](scale_equivalence/) hold new Leiden-CPM runs on the thesis graph (weight scale, weight–edge alignment, coherence) with aggregated results only. See their READMEs.
 
 ## Provenance
 

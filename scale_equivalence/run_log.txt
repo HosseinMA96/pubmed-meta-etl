@@ -1,0 +1,15 @@
+Part 1: 2400 checks on a 60-node graph with 278 edges; max |lhs-rhs| = 9.095e-13
+Part 2: 4140 set partitions of 8 nodes, 13 edges
+  alpha=  0.5 gamma=0.05: best quality 2.832834 vs 2.832834; same optimum: True
+  alpha=  0.5 gamma=0.25: best quality 0.766539 vs 0.766539; same optimum: True
+  alpha=  0.5 gamma=1.00: best quality 0.000000 vs 0.000000; same optimum: True
+  alpha=  2.0 gamma=0.05: best quality 15.531336 vs 15.531336; same optimum: True
+  alpha=  2.0 gamma=0.25: best quality 10.149191 vs 10.149191; same optimum: True
+  alpha=  2.0 gamma=1.00: best quality 3.066155 vs 3.066155; same optimum: True
+  alpha=  9.0 gamma=0.05: best quality 74.791014 vs 74.791014; same optimum: True
+  alpha=  9.0 gamma=0.25: best quality 69.191014 vs 69.191014; same optimum: True
+  alpha=  9.0 gamma=1.00: best quality 48.191014 vs 48.191014; same optimum: True
+  alpha= 18.2 gamma=0.05: best quality 152.675161 vs 152.675161; same optimum: True
+  alpha= 18.2 gamma=0.25: best quality 147.075161 vs 147.075161; same optimum: True
+  alpha= 18.2 gamma=1.00: best quality 126.075161 vs 126.075161; same optimum: True
+All checks passed.
